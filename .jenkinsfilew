@@ -17,7 +17,7 @@ PATH = "C:\\Windows\\System32"
                 // Get some code from a GitHub repository
                // git credentialsId: 'SelvaPipelineRepo', url: 'https://github.com/selvakani1806/TestAutomation.git'
                                                            // To run Maven on a Windows agent, use
-        sh "mvn -Dmaven.test.failure.ignore=true clean package"
+        bat "mvn -Dmaven.test.failure.ignore=true clean package"
         
             }
 
