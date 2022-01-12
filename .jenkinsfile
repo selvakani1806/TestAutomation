@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+    environment {
+
+PATH = "C:\\Windows\\System32"
+
+}
+
+    tools {
+        // Install the Maven version configured as "M3" and add it to the path.
+        maven "Maven"
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                // Get some code from a GitHub repository
+               // git credentialsId: 'SelvaPipelineRepo', url: 'https://github.com/selvakani1806/TestAutomation.git'
+                                                           // To run Maven on a Windows agent, use
+        bat "mvn -Dmaven.test.failure.ignore=true clean package"
+        
+            }
+
+            }
+    }
+}
