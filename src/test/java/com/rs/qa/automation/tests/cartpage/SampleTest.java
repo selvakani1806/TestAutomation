@@ -78,6 +78,7 @@ public class SampleTest {
 			driver.get("https://secure.rosettastone.com/us_en_store_view/checkout/cart/add/sku/92207/category_id/all");
 
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			System.out.println("Title is " +driver.getTitle());
 
 		} catch (Exception e) {
 
