@@ -56,15 +56,14 @@ public class SampleTest {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-extensions");
 		options.addArguments("--start-maximized");
-		HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
-		chromePrefs.put("profile.default_content_settings.popups", 0);
+		//HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
+		//chromePrefs.put("profile.default_content_settings.popups", 0);
 		//chromePrefs.put("download.default_directory", downloadFilepath);
-		options.setExperimentalOption("prefs", chromePrefs);
+		//options.setExperimentalOption("prefs", chromePrefs);
 		options.addArguments("--no-sandbox");
-		options.addArguments("--headless"); // should be enabled for Jenkins
+		//options.addArguments("--headless"); // should be enabled for Jenkins
 		options.addArguments("--disable-dev-shm-usage"); // should be enabled for Jenkins
 		options.addArguments("--window-size=1920x1080"); // should be enabled for Jenkins
-		driver = new ChromeDriver(options);
 		driver = new ChromeDriver(options);
 		driver.manage().deleteAllCookies();
 		
