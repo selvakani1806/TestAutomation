@@ -30,7 +30,18 @@ public class SampleTest {
 
 		prop.getProperty("RUN_ENV");
 		runplatform = prop.getProperty("RUN_PLATFORM");
+		
+        File file = new File(System.getProperty("user.dir") + File.separator + "src" + File.separator + "test"
+				+ File.separator + "resources" + File.separator + "Linux" + File.separator + "chromedriver");
 
+		file.setReadable(true);
+		file.setWritable(true);
+		file.setExecutable(true);
+		
+		System.out.println("Is Execute allow : " + file.canExecute());
+		System.out.println("Is Write allow : " + file.canWrite());
+	        System.out.println("Is Read allow : " + file.canRead());
+	      
 		if (runplatform.equalsIgnoreCase("WINDOWS")) {
 			chromeDriverpath = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test"
 					+ File.separator + "resources" + File.separator + "Windows" + File.separator + "chromedriver.exe";
